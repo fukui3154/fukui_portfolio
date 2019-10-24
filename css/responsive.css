@@ -1,0 +1,576 @@
+/* タブレット向けレイアウト */
+@media all and (max-width: 1000px) {
+  .lesson {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .tops h1 {
+    font-size: 32px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media screen and (max-width: 670px) {
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .title h2 {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+  }
+
+  .title h2:before, h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: #000055;
+  }
+
+  .title h2:before {
+    left: 0;
+  }
+
+  .title h2:after {
+    right: 0;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 5px 100px 5px 50px;
+  }
+
+  header h1 {
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .zdo_drawer_button * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .zdo_drawer_button {
+    display: block;
+    padding: 0;
+    width: 42px;
+    height: 26px;
+    position: relative;
+    background: none;
+    border: none;
+    text-align: center;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .zdo_drawer_button .zdo_drawer_bar {
+    display: block;
+    width: 42px;
+    height: 2px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+  }
+
+  .zdo_drawer_button .zdo_drawer_bar1 {
+    top: 0;
+  }
+
+  .zdo_drawer_button .zdo_drawer_bar2 {
+    top: 50%;
+  }
+
+  .zdo_drawer_button .zdo_drawer_bar3 {
+    top: 100%;
+  }
+
+  .zdo_drawer_button.active .zdo_drawer_bar {
+    width: 36.77px;
+    left: 8px;
+  }
+
+  .zdo_drawer_button.active .zdo_drawer_bar1 {
+    transform: rotate(0.7853981634rad) translateY(-50%);
+    top: 0px;
+  }
+
+  .zdo_drawer_button.active .zdo_drawer_bar2 {
+    opacity: 0;
+  }
+
+  .zdo_drawer_button.active .zdo_drawer_bar3 {
+    transform: rotate(-0.7853981634rad) translateY(-50%);
+    top: calc(100% - 0px);
+  }
+
+  .zdo_drawer_button.active .zdo_drawer_menu_text {
+    display: none;
+  }
+
+  .zdo_drawer_button.active .zdo_drawer_close {
+    display: block;
+  }
+
+  .zdo_drawer_text {
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .zdo_drawer_close {
+    letter-spacing: 0.08em;
+    display: none;
+  }
+
+  /*+++ Default Button Color +++*/
+  .zdo_drawer_button {
+    color: #333333;
+  }
+
+  .zdo_drawer_button .zdo_drawer_bar {
+    background-color: #333333;
+  }
+
+  /* === Hambuerger Button's Style End === */
+  .zdo_drawer_menu .zdo_drawer_button {
+    /*+++ Hamburger Button Position +++*/
+    position: fixed;
+    top: 32px;
+    right: 15px;
+    z-index: 1001;
+  }
+  .zdo_drawer_menu a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .zdo_drawer_menu a:visited {
+    color: inherit;
+  }
+  .zdo_drawer_menu .zdo_drawer_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(51, 51, 51, 0.5);
+    display: none;
+    top: 0;
+    left: 0;
+  }
+  .zdo_drawer_menu .zdo_drawer_nav_wrapper {
+    width: 312px;
+    height: 100%;
+    transition: all 0.2s;
+    transform: translate(312px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #FFF;
+  }
+  .zdo_drawer_menu .zdo_drawer_nav_wrapper.open {
+    transform: translate(0);
+  }
+  .zdo_drawer_menu.left .zdo_drawer_button {
+    right: auto;
+    left: 32px;
+  }
+  .zdo_drawer_menu.left .zdo_drawer_nav_wrapper {
+    transform: translate(-312px);
+    right: auto;
+    left: 0;
+  }
+  .zdo_drawer_menu.left .zdo_drawer_nav_wrapper.open {
+    transform: translate(0);
+  }
+
+  /*+++ Default Navigation CSS +++*/
+  .zdo_drawer_menu .zdo_drawer_nav {
+    padding: 112px 24px;
+  }
+  .zdo_drawer_menu .zdo_drawer_nav li {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+
+  .top-container {
+    height: auto;
+    text-align: center;
+    padding: 80px;
+  }
+
+  .top-container h1 {
+    font-size: 40px;
+  }
+
+
+
+  .service-container {
+    height: auto;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .service-contents {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .scroll-in {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all 1.6s;
+  }
+
+  .scroll-in.scrollin {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+
+  .scroll-in:nth-of-type(2){
+    -moz-transition-delay: 200ms;
+    -webkit-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+  }
+
+  .scroll-in:nth-of-type(3){
+    -moz-transition-delay: 400ms;
+    -webkit-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    -ms-transition-delay: 400ms;
+  }
+
+
+  .service-content {
+    flex-basis: 30%;
+    margin: 40px;
+    transition-duration: 0.5s;
+  }
+
+  .service-content img{
+    align-self: flex-start;
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+
+  .service-content  img:hover {
+    box-shadow: 10px 10px 10px
+    rgba(0,0,0,0.5);
+      transform: translateY(-10px);
+      transition-duration: 0.5s;
+  }
+  /* .service-content.scrollin {
+    opacity: 1;
+    transform: translate(0,0);
+  } */
+
+  .service-title {
+    font-size: 20px;
+    margin: 25px 0 5px 0;
+  }
+
+  .service-subtitle {
+    font-size: 12px;
+    margin: 0 0 15px 0;
+  }
+
+  .service-text {
+    text-align: left;
+    line-height: 1.5;
+  }
+
+
+  .service-contents .service-content {
+    width: 80%;
+  }
+
+
+  /* プロフィール */
+  .profile-container {
+    height: auto;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .profile-contents {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .profile-right {
+    flex-basis: 100%;
+    margin-top: 40px;
+    text-align: left
+  }
+
+  .profile-left {
+    flex-basis: 100%;
+    margin: 10px 0 0 0px;
+  }
+
+  .profile-left img {
+    height: 300px;
+    width: 230px;
+  }
+
+  .profile-text {
+    margin-top: 45px;
+    line-height: 1.5;
+  }
+
+  .profile-text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  /* プロフィール */
+
+  /* コンタクト */
+  .contact-container {
+    height: auto;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .contact-text {
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+    width: 100%;
+
+  }
+
+  .contact-form form {
+    text-align: center;
+  }
+
+  .form-group {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+
+  textarea {
+    height: 200px;
+  }
+  /* コンタクト */
+
+  /* ABOUT */
+  .baseball-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .historic-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .about-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-child {
+    flex-basis: 40%;
+    padding: 50px;
+    line-height: 1.5;
+  }
+
+  .about-child img {
+    width: 100%;
+  }
+
+
+  /* ABOUT */
+
+  /* WORKS */
+  .title1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .works-container {
+    height: auto;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .works-genre {
+    width: 130px;
+  }
+
+  .works-genre p {
+    background-color: #000044;
+    border-radius: 3px;
+    color: #E5E5E5;
+    padding: 3px;
+  }
+
+  .works-image {
+    /* max-width: 100%; */
+    width: 100%;
+    height: 1200px;
+    margin: 40px auto;
+    background-image: url("../images/works-vertical.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .works-image2 {
+    /* max-width: 100%; */
+    width: 100%;
+    height: 1200px;
+    margin: 40px auto;
+    background-image: url("../images/takei-works-res.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .works-contents {
+    /* display: flex; */
+  }
+
+  .works-top {
+    border-bottom: dotted 2px #333333;
+    margin-bottom: 10px;
+    padding: 3px 0;
+  }
+
+  .works-contents-left {
+    margin-bottom: 75px;
+    text-align: left;
+  }
+
+  .works-contents-right {
+    text-align: left;
+    margin: auto;
+  }
+
+  .works-contents-right p {
+    padding: 3px 0;
+  }
+
+  .language {
+    background-color: #b0c4de;
+    border-radius: 3px;
+    padding: 0.2px 1px;
+  }
+
+  .second-container {
+    height: auto;
+    text-align: center;
+  }
+
+  /* Works */
+
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    margin: 0;
+  }
+  #conference-timeline .conference-center-line {
+    margin-left: 0;
+    left: 50px;
+  }
+  #conference-timeline .conference-timeline-content {
+    padding-top: 67px;
+    padding-bottom: 67px;
+    padding-right: 30px;
+  }
+  .timeline-article .meta-date {
+    margin-left: 0;
+    left: 20px;
+  }
+  .timeline-article .content-left-container,
+  .timeline-article .content-right-container {
+    max-width: 100%;
+    width: auto;
+    float: none;
+    margin-left: 110px;
+    min-height: 53px;
+  }
+  .timeline-article .content-left-container {
+    margin-bottom: 20px;
+  }
+  .timeline-article .content-left,
+  .timeline-article .content-right {
+    padding: 10px 25px;
+    min-height: 65px;
+  }
+  .timeline-article .content-left:before {
+    content: "\f0d9";
+    right: auto;
+    left: -8px;
+  }
+  .timeline-article .content-right:before {
+    display: none;
+  }
+
+  .timeline-article .meta-date .date,
+  .timeline-article .meta-date .month {
+    display: block;
+    text-align: center;
+    font-weight: 900;
+  }
+  .timeline-article .meta-date .date {
+    font-size: 17px;
+    line-height: 40px;
+  }
+  .timeline-article .meta-date .month {
+    font-size: 12px;
+    line-height: 10px;
+  }
+}

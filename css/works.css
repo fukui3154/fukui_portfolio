@@ -1,0 +1,276 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+p {
+  font-size: 20px;
+  color: #333333;
+  letter-spacing: 1.5px;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+body {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  color: #333333;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+/* ヘッダー部分 */
+@media all and (min-width: 671px){
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 80px;
+  }
+
+  .title h2 {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+  }
+
+  .title h2:before, h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: #000055;
+  }
+
+  .title h2:before {
+    left: 0;
+  }
+
+  .title h2:after {
+    right: 0;
+  }
+
+  header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 100px 5px 50px;
+  }
+
+  header h1 {
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  header ul {
+    display: flex;
+    list-style: none;
+  }
+
+  header li {
+    margin-left: 5rem;
+    padding: 5px;
+    font-size: 30px;
+    background-color: transparent;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+
+  header li:hover {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid #333333;
+    /* border-radius: 5px; */
+    color: #998bfa !important;
+  }
+
+
+  /* ヘッダー部分 */
+
+  .title1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .works-container {
+    height: auto;
+    padding: 100px 200px;
+    text-align: center;
+  }
+
+  .works-genre {
+    width: 130px;
+  }
+
+  .works-genre p {
+    background-color: #000044;
+    border-radius: 3px;
+    color: #E5E5E5;
+    padding: 3px;
+  }
+
+  .works-image {
+    /* max-width: 100%; */
+    width: 100%;
+    height: 350px;
+    margin: 40px auto;
+    background-image: url("../images/works-image.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .works-image2 {
+    /* max-width: 100%; */
+    width: 100%;
+    height: 350px;
+    margin: 40px auto;
+    background-image: url("../images/take-work-nor.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .works-contents {
+    display: flex;
+  }
+
+  .works-top {
+    border-bottom: dotted 2px #333333;
+    margin-bottom: 10px;
+    padding: 3px 0;
+  }
+
+  .works-contents-left {
+    flex-basis: 60%;
+    text-align: left;
+  }
+
+  .works-contents-right {
+    flex-basis: 40%;
+    text-align: left;
+    margin-left: 70px;
+  }
+
+  .works-contents-right p {
+    padding: 3px 0;
+  }
+
+  .language {
+    background-color: #b0c4de;
+    border-radius: 3px;
+    padding: 0.2px 1px;
+  }
+
+  .second-container {
+    height: auto;
+    text-align: center;
+  }
