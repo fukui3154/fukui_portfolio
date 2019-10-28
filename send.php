@@ -51,12 +51,14 @@
   <?php if ($err_msg != ''): ?>
     <div class="alert alert-danger">
       <?php echo $err_msg; ?>
+      <p><a href="contact.html">投稿画面へ</a></p>
     </div>
   <?php endif; ?>
 
-  <?php if ($completed_msg != ''): ?>
+  <?php if ($complete_msg != ''): ?>
     <div class="alert alert-success">
-      <?php echo $completed_msg; ?>
+      <?php echo $complete_msg; ?>
+      <p><a href="index.html">トップ画面へ</a></p>
     </div>
   <?php endif; ?>
 

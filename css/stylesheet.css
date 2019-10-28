@@ -192,6 +192,9 @@ body {
     color: #998bfa !important;
   }
 
+  .zdo_drawer_button {
+    display: none;
+  }
 
   /* ヘッダー部分 */
 
@@ -202,9 +205,11 @@ body {
     text-align: center;
     padding: 200px;
     background-image: url("../images/new.png");
-    background-position: left bottom;
+    /* background-position: left bottom; */
+    background-position-y: 300%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .top-container h1 {
